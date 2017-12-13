@@ -5,7 +5,8 @@ class AdminController < ApplicationController
 
   def memberlist
     #@members=Member.order(id: :desc).page params[:page]
-    @members = Member.order("created_at DESC").page(params[:page]).per(10)
+    #@members = Member.order("created_at DESC").page(params[:page]).per(10)
+    @members = Member.all
     #@transactions=Transaction.order(id: :desc).page params[:page]
   end
 
